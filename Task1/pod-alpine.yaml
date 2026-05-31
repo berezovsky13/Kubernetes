@@ -1,4 +1,3 @@
-#Task 1
 apiVersion: v1
 kind: Pod
 metadata:
@@ -8,4 +7,4 @@ spec:
   containers:
   - name: alpine
     image: alpine
-    command: ["sleep", "360
+    command: ["sleep", "3600"]
