@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "my-nginx-app.fullname" . }}
+  name: {{ include "Task6.fullname" . }}
   labels:
-    {{- include "my-nginx-app.labels" . | nindent 4 }}
+    {{- include "Task6.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "my-nginx-app.fullname" . }}
+    name: {{ include "Task6.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:
